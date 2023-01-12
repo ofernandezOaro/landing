@@ -1,0 +1,50 @@
+.callToAction{
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  position: relative;
+  background-color: white;
+  padding: 75px 0;
+  
+  & .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+  }
+
+  .button {
+    background: $secondary;
+    padding: 12px;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.241);
+    min-width: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    &:hover{
+      background: $secondary-light;
+      transition: 0.2s ease-in;
+    }
+  }
+
+  span {
+    font-size: 1.7rem;
+    text-align: center;
+    width: 80%;
+  }
+  h2{
+    color: $secondary;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+
+}

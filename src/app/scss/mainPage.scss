@@ -1,0 +1,98 @@
+.page{
+  background: linear-gradient(-45deg, $primary, $primary-dark, $secondary-light, $secondary);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+  height: 100vh;
+  position: relative;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+    background-position: 100% 50%;
+	}
+	100% {
+    background-position: 0% 50%;
+	}
+}
+
+.gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 269px;
+  height: 314px;
+  filter: blur(160px);
+  background-color: $primary;
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;justify-content: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+
+  @include responsive(mobile) {
+      padding: 0 55px;
+    }
+
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &__logo{
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 25px;
+      @include responsive(mobile) {
+        padding-bottom: 10px;
+      }
+  
+      & img{
+        width: 30%;
+        @include responsive(mobile) {
+          width: 50%;
+        }
+      }
+    }
+
+    &__title{
+      font-size: 1.75rem;
+      color: white;
+      font-weight: bold;
+      width: 60%;
+      @include responsive(mobile) {
+        width: 100%;
+      }
+      @media (max-width: 400px){
+        font-size: 1.3rem;
+      }
+    }
+    
+    &__description{
+      width: 50%;
+      @include responsive(mobile) {
+          width: 100%;
+        }
+      span{
+        color: $primary;
+        font-size: 1.55rem;
+        color: white;
+        font-weight: 400;
+
+        #span-multibooks{
+          color: $primary;
+          background: $secondary;
+          padding: 1px 4px;
+        }
+      }
+    }
+  }
+
+}
