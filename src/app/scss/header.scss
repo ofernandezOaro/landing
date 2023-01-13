@@ -4,6 +4,7 @@
   height: 60px;
   width: 100%;
   border-bottom: 0.2px solid rgba(255, 255, 255, 0.431);
+  background-color: $secondary;
   z-index: 99;
 
   @include responsive(mobile) {
