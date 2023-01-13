@@ -3,9 +3,13 @@ import React from 'react'
 const PageFeatures = () => {
   return (
     <div className='features' id='features'>
+      
       <div className='container'>
         <div className='container__title'>
+          <div className='container__title_items'>
+          <div className='line'/>
           <h2>What is A.R.S.?</h2>
+          </div>
           <span>An unprecedented audiobook recording system, created by and for audiobook professionals, to transform the full production cycle.</span>
         </div>
         <div className='container__features'>

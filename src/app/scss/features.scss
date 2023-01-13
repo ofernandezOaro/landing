@@ -2,6 +2,8 @@
   width: 100%;
   min-height: 100vh;
   background-color: $secondary;
+  color: $primary;
+
 
   & .container {
     max-width: 1200px;
@@ -17,13 +19,26 @@
       gap: 18px;
       justify-content: center;
 
-      h2{
-        color: white;
-        font-size: 2rem;
+      &_items{
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        & .line{
+          width: 15px;
+          height: 40px;
+          background: $primary;
+          transform: skew(340deg);
+        }
+
+        h2{
+          font-size: 2rem;
+        }
+
       }
+
+
       span{
         width: 80%;
-        color: white;
         font-size: 1.7rem;
       }
     }
@@ -34,7 +49,6 @@
       grid-template-rows: 1fr 1fr;
       gap: 12px;
       margin-top: 55px;
-      color: white;
       font-size: 1.2rem;
       font-weight: bold;
       @include responsive(mobile) {
@@ -50,7 +64,7 @@
       div{
         height: 100px;
         border-radius: 4px;
-        border: 0.2px solid rgba(255, 255, 255, 0.431);
+        border: 0.2px solid $primary-dark;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -62,9 +76,8 @@
     }
 
     h3{
-      color: white;
       font-size: 1.3rem;
-      font-weight: lighter;
+      font-weight: regular;
       text-align: center;
     }
   }
