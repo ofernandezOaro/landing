@@ -1,6 +1,6 @@
 .features{
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: $secondary;
   color: $primary;
 
@@ -19,10 +19,16 @@
       gap: 18px;
       justify-content: center;
 
+      .hr{
+        border: 0.3px solid rgba(255, 255, 255, 0.253);
+        width: 100%;
+      }
+
       &_items{
         display: flex;
         gap: 15px;
         align-items: center;
+
         & .line{
           width: 15px;
           height: 40px;
@@ -36,7 +42,6 @@
 
       }
 
-
       span{
         width: 80%;
         font-size: 1.7rem;
@@ -45,40 +50,48 @@
 
     &__features{
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       gap: 12px;
       margin-top: 55px;
       font-size: 1.2rem;
       font-weight: bold;
       @include responsive(mobile) {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-      }
-
-      @media (max-width: 400px){
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
       }
-
-      div{
-        height: 100px;
-        border-radius: 4px;
-        border: 0.2px solid $primary-dark;
+      .features_title{
+        text-align: left;
+        font-weight: normal;
+      }
+      .features{
+        height: 100%;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 18px;
+        font-weight: normal;
+        font-size: 1.8rem;
+        & div:nth-child(odd){
+          color: white;
+        }
         @include responsive(mobile) {
           padding: 16px;
-          text-align: center;
+          text-align: left;
         }
       }
-    }
 
-    h3{
-      font-size: 1.3rem;
-      font-weight: regular;
-      text-align: center;
+      h3{
+        font-size: 1.3rem;
+        font-weight: normal;
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        color: white;
+        @include responsive(mobile) {
+          grid-column-end: 2;
+        }
+      }
     }
   }
 }
